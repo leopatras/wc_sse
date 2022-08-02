@@ -1,0 +1,22 @@
+ACTION DEFAULTS
+  ACTION data_available(DEFAULTVIEW=NO)
+END 
+LAYOUT
+GRID
+{
+[data                                                                   ]
+[                                                                       ]
+[resultlabel                                                            ]
+[te                                                                     ]
+[                                                                       ]
+[                                                                       ]
+[                                                                       ]
+[                                                                       ]
+}
+END
+END
+ATTRIBUTES
+LABEL resultlabel:TEXT="Result",JUSTIFY=CENTER;
+WEBCOMPONENT data = formonly.data,   COMPONENTTYPE="sse", SIZEPOLICY=FIXED,
+ PROPERTIES = (url=""),STRETCH=x ;
+TEXTEDIT te=FORMONLY.te,STRETCH=BOTH;
