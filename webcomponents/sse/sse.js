@@ -14,12 +14,7 @@ function addEventSource(url) {
     theinput.value=data;
     gICAPI.SetData(data);
     gICAPI.Action("data_available");
-    if (e.data == "http404" ) {
-      mylog("session ended, finally close source");
-      closeSource();
-    } else {
-      reAddSource(url,true);
-    }
+    reAddSource(url,true);
   });
   source.addEventListener('error', function(e) {
     mylog("err readyState:"+e.target.readyState);
